@@ -432,7 +432,7 @@ void IR_timer (void)
 void IR_loop ()
 {
     if (IrCtrl.state == IR_RECVED) {
-        IrCtrl.on_receive();
+        // IrCtrl.on_receive();
 #ifndef FACTORY_CHECKER
         // factory checker xmits after receive
         IR_state( IR_RECVED_IDLE );

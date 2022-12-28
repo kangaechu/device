@@ -37,7 +37,7 @@ namespace config {
     // If you use your IRKit device exclusively over your LAN, you can disable
     // this option: the device won't send regular polling requests to the cloud server.
     // This also lets you setup your device without internet access (no need for a valid device key).
-    const bool useCloudControl = true;
+    const bool useCloudControl = false;
 
 }
 

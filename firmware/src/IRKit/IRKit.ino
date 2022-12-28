@@ -314,15 +314,14 @@ void connect() {
     }
 
     if (gs.isListening()) {
+        // start mDNS
+        gs.setupMDNS();
         
         if (!config::useCloudControl) {
             // No WAN access, we don't need to validate key, we're ready.
             IR_state( IR_IDLE );
             on_irkit_ready();
         } else {
-            // start mDNS
-            gs.setupMDNS();
-    
             if (keys.isAPIKeySet() && ! keys.isValid()) {
                 irkit_httpclient_post_door();
             }
